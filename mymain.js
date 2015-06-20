@@ -39,7 +39,7 @@ var getKeys = function(Car){
 console.log(keys);
 }
 function Multiplier(array){
-	this.array = array; 
+	this.array = array;
 	
 
 	this.multiply = function() {
@@ -49,7 +49,7 @@ function Multiplier(array){
 		var mult = _.map(this.array, function(num){return num * 2;});
 		console.log(mult);
 		while (sum < 10000){
-			sum = _.reduce(mult, function(memo, num){return memo + num;},0);
+			sum += _.reduce(mult, function(memo, num){return memo + num;},0);
 			console.log(sum);
 			var multe = _.map(mult, function(num){return num * sum;});
 			console.log(multe);
